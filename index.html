@@ -23,11 +23,12 @@
   	.valueProps{
   		width: 60%;
   		display: flex;
-  		align-items: center;
+  		
   		padding:50px;
   		font-size: 30px;
   		color: gray;
   		padding:5% 10% 5% 10%;
+  		flex-direction: column;
   	}
   	.demo{
   		width:30%;
@@ -49,6 +50,45 @@
   		margin: 2% auto 2% 10%;
   	}
 
+  	input {
+  	
+  		height:36px;
+  		border: 1px solid gray;
+  		width:300px;
+		padding-left: 10px;
+  	}
+
+  	.disclaim {
+  		font-size: 12px;
+  		width:300px;
+
+  	}
+  	.button {
+  		 text-align: center;
+  		border: 1px solid black;
+  		font-size: 16px;
+  		color:black;
+  		width:100px;
+  		height:40px;
+  		line-height: 40px;
+  		margin-left: 10px;
+  		padding:10px;
+  		position: relative;
+        top: 2px;
+        cursor: pointer;
+        font-weight: 200;
+  	}
+
+  	.button:hover{
+  		border: 1px solid gray;
+  		color:darkgray;
+  	}
+
+  	.inputGroup{
+  		width:500px;
+
+  	}
+
   	</style>
   </head>
 
@@ -61,7 +101,13 @@
   <div class="container">
   	
  	  <div class="valueProps">
- 	  	Pitney Bowes’s upcoming solution will automate your reconciliation process by connecting your inbound payments to invoices.
+ 	    <p>
+ 	  	Pitney Bowes’ upcoming solution will automate your reconciliation process by connecting your inbound payments to invoices.
+ 	  	</p>
+ 	  	<div class="inputGroup">
+ 	  		<input placeholder="Please enter your email to learn more" /><a class="button">SUBMIT</a>
+ 	  	</div>
+ 	  	<p class="disclaim">You will recieve news about our upcoming solution. We will not use your email for other purposes, your privacy is our highest priority.</p>
  	  </div>	
 
 	  <div class="demo">
