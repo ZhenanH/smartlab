@@ -72,11 +72,11 @@
       color:black;
       width:100px;
       height:40px;
-      line-height: 40px;
+      background-color: white;
       margin-left: 10px;
       padding:10px;
       position: relative;
-        top: 1px;
+        top: 2px;
         cursor: pointer;
         font-weight: 200;
     }
@@ -98,7 +98,7 @@
     </style>
   </head>
   <script>
-    Buddy.init('bbbbbc.wMwDGpqdqhzGc', 'adef05ff-ad7b-4b38-bca3-be2cf660332c');
+   // Buddy.init('bbbbbc.DPGkwKtGHlzGc', 'df6c6ba4-64ca-76c5-d103-4b667a2e5e4c');
   </script>
   <body>
   <div class="page">
@@ -209,27 +209,14 @@
   </body>
   <script>
    
+    console.log($('#submit'));
     $('#submit').click(function() {
-   
-        var options = {
-          location: "47.1, -121.292",
-          comment: $("#emailinput").val(),
-          writePermissions: "User"
-        };
 
-        Buddy.post('/checkins',
-            options,
-            function(err, result) {
-               
-              if (result.success) {
-                  console.log($("#emailinput").val());
-              } else { 
-                // Otherwise log the error
-                console.log(err); 
-              } 
-            }
-          );
-
+     $.get("http://pbsmartlab.com:8888/users/"+ $("#emailinput").val(),function(d){
+      alert(d);
+          console.log(d);
+     });
+  
 
 
 
