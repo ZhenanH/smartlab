@@ -1,7 +1,8 @@
 <!doctype html>
 <html lang="en">
   <head>
-
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="./buddy.js"></script>
     <style>
 
     body{
@@ -26,9 +27,10 @@
       
       padding:50px;
       font-size: 30px;
-      color: gray;
+      color: #333;
       padding:5% 10% 5% 10%;
       flex-direction: column;
+      font-family: "Precision Sans", "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
     }
     .demo{
       width:30%;
@@ -74,7 +76,7 @@
       margin-left: 10px;
       padding:10px;
       position: relative;
-        top: 2px;
+        top: 1px;
         cursor: pointer;
         font-weight: 200;
     }
@@ -85,17 +87,23 @@
     }
 
     .inputGroup{
+      margin-top:100px;
       width:500px;
 
     }
+    a{
+    text-decoration: none;
+   }
 
     </style>
   </head>
-
+  <script>
+    Buddy.init('bbbbbc.wMwDGpqdqhzGc', 'adef05ff-ad7b-4b38-bca3-be2cf660332c');
+  </script>
   <body>
   <div class="page">
   <header>
-  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/Pitney_Bowes_2015.svg/1280px-Pitney_Bowes_2015.svg.png" width="200px"/>
+  <a href="http://www.pitneybowes.com"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/Pitney_Bowes_2015.svg/1280px-Pitney_Bowes_2015.svg.png" width="200px"/></a>
     
   </header>
   <div class="container">
@@ -104,9 +112,10 @@
       <p>
       Pitney Bowes’ upcoming solution will automate the reconciliation of inbound payments to invoices.
       </p>
-      <div class="inputGroup">
-        <input placeholder="Please enter your email to learn more" /><a class="button">SUBMIT</a>
-      </div>
+      <form class="inputGroup">
+        <input placeholder="Please enter your email to learn more" id="emailinput" type="email" />
+        <input  class="button" type = "submit" value="Submit" id="submit" href="./survey.html" />
+      </form>
       <p class="disclaim">You will receive news about our upcoming solution. We will not use your email for other purposes, your privacy is our highest priority.</p>
     </div>  
 
@@ -195,8 +204,35 @@
 </svg>
   </div>
  </div> 
- <div class="footer">
- </div>
+ 
  </div>
   </body>
+  <script>
+   
+    $('#submit').click(function() {
+   
+        var options = {
+          location: "47.1, -121.292",
+          comment: $("#emailinput").val(),
+          writePermissions: "User"
+        };
+
+        Buddy.post('/checkins',
+            options,
+            function(err, result) {
+               
+              if (result.success) {
+                  console.log($("#emailinput").val());
+              } else { 
+                // Otherwise log the error
+                console.log(err); 
+              } 
+            }
+          );
+
+
+
+
+      });
+  </script>
 </html>
