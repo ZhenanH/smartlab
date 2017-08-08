@@ -112,9 +112,9 @@
       <p>
       Pitney Bowes’ upcoming solution will automate the reconciliation of inbound payments to invoices.
       </p>
-      <form class="inputGroup">
+      <form class="inputGroup" id="myForm">
         <input placeholder="Please enter your email to learn more" id="emailinput" type="email" />
-        <input  class="button" type = "submit" value="Submit" id="submit" href="./survey.html" />
+        <input  class="button" type = "submit" value="Submit" id="submit"  />
       </form>
       <p class="disclaim">You will receive news about our upcoming solution. We will not use your email for other purposes, your privacy is our highest priority.</p>
     </div>  
@@ -209,17 +209,14 @@
   </body>
   <script>
    
-    console.log($('#submit'));
-    $('#submit').click(function() {
-
-     $.get("http://pbsmartlab.com:8888/users/"+ $("#emailinput").val(),function(d){
-      alert(d);
-          console.log(d);
+   $('#myForm').submit(function(e){
+    e.preventDefault();
+    $.get("http://pbsmartlab.com:8888/user/"+ $("#emailinput").val(),function(d){
+        window.location.href ="./survey.html";  
      });
   
+  });
 
 
-
-      });
   </script>
 </html>
