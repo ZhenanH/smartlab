@@ -1,9 +1,10 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-    <script src="./buddy.js"></script>
-    <style>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+  <style>
+
 
     body{
       font-family: "Helvetica Neue";
@@ -11,30 +12,31 @@
     } 
 
 
+
     h1{
       margin:20px 50px 20px 50px;
     }
 
-    .container{
+    ._container{
       display: flex;
       flex-direction: row;
       width: 100%;
     }
 
     .valueProps{
-      width: 60%;
+
       display: flex;
       
-      padding:50px;
+
       font-size: 30px;
       color: #333;
-      padding:5% 10% 5% 10%;
+
       flex-direction: column;
       font-family: "Precision Sans", "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
     }
     .demo{
-      width:30%;
-      padding:50px;
+
+      padding:0 10% 0 10%;
     }
 
     .page {
@@ -49,220 +51,115 @@
     }
 
     header {
-      margin: 2% auto 2% 10%;
+      margin: 40px auto 40px auto;
     }
 
     input {
-    
-      height:36px;
+
+      height:48px;
       border: 1px solid gray;
-      width:300px;
-    padding-left: 10px;
+      width:calc(100% - 120px);
+      padding-left: 10px;
+      font-size: 14px;
     }
 
     .disclaim {
       font-size: 12px;
-      width:300px;
+      width:100%;
+      margin-top: 20px;
 
     }
     .button {
-       text-align: center;
-      border: 1px solid black;
-      font-size: 16px;
-      color:black;
-      width:100px;
-      height:40px;
-      background-color: white;
-      margin-left: 10px;
-      padding:10px;
-      position: relative;
-        top: 2px;
-        cursor: pointer;
-        font-weight: 200;
-    }
+     text-align: center;
+     border: 1px solid black;
+     font-size: 16px;
+     color:black;
+     width:100px;
+     height:48px;
+     background-color: white;
+     margin-left: 5px;
 
-    .button:hover{
-      border: 1px solid gray;
-      color:darkgray;
-    }
-
-    .inputGroup{
-      margin-top:100px;
-      width:500px;
-
-    }
-    a{
-    text-decoration: none;
+     position: relative;
+     cursor: pointer;
+     font-weight: 200;
    }
 
-    </style>
+   .button:hover{
+    border: 1px solid gray;
+    color:darkgray;
+  }
+
+  .inputGroup{
+    margin-top:40px;
+    width: 100%;
+
+  }
+  a{
+    text-decoration: none;
+  }
+
+</style>
 
 <script>
+  
+  var index = Math.random();
+  if(index < 0.33)
+    window.location = "./index_1.html";
+  else if(index >=0.33 && index < 0.67)
+    window.location = "./index_2.html";
+  else
+    window.location = "./index_3.html";
+  
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
     (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
     m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-          })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
- 
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
   ga('create', 'UA-104243713-1', 'auto');
   ga('send', 'pageview');
- 
-</script>
-
-    <script>
-
-!function(f,b,e,v,n,t,s)
-
-{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-
-if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-
-n.queue=[];t=b.createElement(e);t.async=!0;
-
-t.src=v;s=b.getElementsByTagName(e)[0];
-
-s.parentNode.insertBefore(t,s)}(window,document,'script',
-
-'https://connect.facebook.net/en_US/fbevents.js');
-
-
-fbq('init', '790817294432686'); 
-
-fbq('track', 'PageView');
 
 </script>
 
-<noscript>
+<script>
 
-<img height="1" width="1" 
+  !function(f,b,e,v,n,t,s)
 
-src="https://www.facebook.com/tr?id=790817294432686&ev=PageView
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
 
-&noscript=1"/>
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
 
-</noscript>
-  </head>
-  <script>
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+
+    n.queue=[];t=b.createElement(e);t.async=!0;
+
+    t.src=v;s=b.getElementsByTagName(e)[0];
+
+    s.parentNode.insertBefore(t,s)}(window,document,'script',
+
+      'https://connect.facebook.net/en_US/fbevents.js');
+
+
+    fbq('init', '790817294432686'); 
+
+    fbq('track', 'PageView');
+
+  </script>
+
+  <noscript>
+
+    <img height="1" width="1" 
+
+    src="https://www.facebook.com/tr?id=790817294432686&ev=PageView
+
+    &noscript=1"/>
+
+  </noscript>
+</head>
+<script>
    // Buddy.init('bbbbbc.DPGkwKtGHlzGc', 'df6c6ba4-64ca-76c5-d103-4b667a2e5e4c');
-  </script>
-  <body>
-  <div class="page">
-  <header>
-  <a href="http://www.pitneybowes.com"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/Pitney_Bowes_2015.svg/1280px-Pitney_Bowes_2015.svg.png" width="200px"/></a>
-    
-  </header>
-  <div class="container">
-    
-    <div class="valueProps">
-      <p>
-      Pitney Bowes’ upcoming solution will automate the reconciliation of inbound payments to invoices.
-      </p>
-      <form class="inputGroup" id="myForm">
-        <input placeholder="Please enter your email to learn more" id="emailinput" type="email" />
-        <input  class="button" type = "submit" value="Submit" id="submit"  />
-      </form>
-      <p class="disclaim">You will receive news about our upcoming solution. We will not use your email for other purposes, your privacy is our highest priority.</p>
-    </div>  
-
-    <div class="demo">
-    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-   viewBox="0 0 350 350" style="enable-background:new 0 0 350 350;" xml:space="preserve">
-<style type="text/css">
-  .st0{fill:#FFFFFF;}
-  .st1{fill:none;stroke:#000000;stroke-width:3;stroke-miterlimit:10;}
-  .st2{fill-rule:evenodd;clip-rule:evenodd;fill:none;stroke:#000000;stroke-width:3;stroke-miterlimit:10;}
-  .st3{fill:#9EE8C5;stroke:#000000;stroke-miterlimit:10;}
-  .st4{fill:none;stroke:#000000;stroke-miterlimit:10;}
-  .st5{fill:#19A580;}
-  .st6{font-family:'MyriadPro-Regular';}
-  .st7{font-size:34.4305px;}
-  .st8{fill:none;stroke:#009245;stroke-width:2;stroke-miterlimit:10;}
-  .st9{fill:#009245;}
-  .st10{fill:none;stroke:#009245;stroke-width:4;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
-</style>
-<g id="Layer_1">
-  <g>
-    <path class="st0" d="M25,203.5c-5.8,0-10.5-4.7-10.5-10.5V53c0-5.8,4.7-10.5,10.5-10.5h207c5.8,0,10.5,4.7,10.5,10.5v140
-      c0,5.8-4.7,10.5-10.5,10.5H25z"/>
-    <path d="M232,44c5,0,9,4,9,9v140c0,5-4,9-9,9H25c-5,0-9-4-9-9V53c0-5,4-9,9-9H232 M232,41H25c-6.6,0-12,5.4-12,12v140
-      c0,6.6,5.4,12,12,12h207c6.6,0,12-5.4,12-12V53C244,46.4,238.6,41,232,41L232,41z"/>
-  </g>
-  <g>
-    <line class="st1" x1="12.5" y1="162.9" x2="243.5" y2="162.9"/>
-  </g>
-  <rect x="88.6" y="203.6" class="st2" width="77.9" height="18.1"/>
-  <line class="st1" x1="73.2" y1="221.8" x2="181.9" y2="221.8"/>
-</g>
-<g id="Layer_2" style="opacity:0">
-
-  <g>
-    <rect x="66.9" y="77.7" class="st3" width="125.9" height="55.3"/>
-    <path class="st4" d="M85,77.7c0,10-8.1,18.1-18.1,18.1"/>
-    <path class="st4" d="M172.9,77.7c0,10,8.9,18.1,19.9,18.1"/>
-    <path class="st4" d="M174.7,133c0-10,8.1-18.1,18.1-18.1"/>
-    <path class="st4" d="M66,114.8c10,0,18.1,8.1,18.1,18.1"/>
-    <text transform="matrix(1 0 0 1 118.8838 114.6274)" class="st5 st6 st7">$</text>
-  </g>
-</g>
-<g id="Layer_3" style="opacity:0">
-
-  <g id="Layer_4">
-    <g>
-      <g>
-        <g>
-          <path class="st8" d="M153,133.3c-7.4,7.8-17.9,12.7-29.5,12.7c-16.8,0-31.2-10.2-37.3-24.7"/>
-          <g>
-            <polygon class="st9" points="142.8,129.8 160.8,121.3 159.2,141.1            "/>
-          </g>
-        </g>
-      </g>
-      <g>
-        <g>
-          <path class="st8" d="M91.8,80.3C99.2,71,110.7,65,123.5,65c16.8,0,31.2,10.2,37.3,24.7"/>
-          <g>
-            <polygon class="st9" points="102.3,82.9 85,92.9 85,72.9             "/>
-          </g>
-        </g>
-      </g>
-    </g>
-  </g>
-</g>
-<g id="Layer_5" style="opacity:0">
-
-  <g>
-    <circle class="st8" cx="123.5" cy="105.5" r="40.5"/>
-    <g>
-      <line class="st10" x1="97" y1="109" x2="115" y2="129"/>
-      <line class="st10" x1="148" y1="83" x2="115" y2="129"/>
-    </g>
-  </g>
-</g>
-
-<animateTransform xlink:href="#Layer_2" id="cash" attributeName="transform" attributeType="XML" type="translate" values="150,0;120,0;50,0;20,0;10,0" dur="1500ms"  begin="0 ; done.end" />
-<animate xlink:href="#Layer_2" attributeName="opacity" attributeType="XML" values="0;0.1;0.2;0.8;0.9;1" dur="1500ms"  begin="cash.begin"/>
-
-<animateTransform xlink:href="#Layer_3" id="sync" attributeName="transform" attributeType="XML" type="rotate" from="0 123.5 105.5" to="-360 123.5 105.5" dur="2000ms"  begin="cash.end"  />
-<animate xlink:href="#Layer_3" attributeName="opacity" attributeType="XML" values="0;1" dur="2000ms" begin="cash.end" />
-
-<animate xlink:href="#Layer_5" id="done" attributeName="opacity" attributeType="XML" values="0;1" dur="2000ms"  begin="sync.end" />
-
-</svg>
-  </div>
- </div> 
+ </script>
+ <body>
  
- </div>
-  </body>
-  <script>
-   
-   $('#myForm').submit(function(e){
-    e.preventDefault();
-    $.get("http://pbsmartlab.com:8888/user/"+ $("#emailinput").val(),function(d){
-        window.location.href ="./survey.html";  
-     });
-  
-  });
+</body>
 
-
-  </script>
 </html>
