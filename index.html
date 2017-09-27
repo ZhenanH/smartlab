@@ -1,113 +1,16 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
-  <style>
-<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-
-    body{
-      font-family: "Helvetica Neue";
-      margin:0;
-    } 
-
-
-
-    h1{
-      margin:20px 50px 20px 50px;
-    }
-
-    ._container{
-      display: flex;
-      flex-direction: row;
-      width: 100%;
-    }
-
-    .valueProps{
-
-      display: flex;
-      
-
-      font-size: 30px;
-      color: #333;
-
-      flex-direction: column;
-      font-family: "Precision Sans", "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
-    }
-    .demo{
-
-      padding:0 10% 0 10%;
-    }
-
-    .page {
-      display: flex;
-      flex-direction: column;
-      height:100vh;
-    }
-
-    .footer {
-      background-color: steelblue;
-      flex:1;
-    }
-
-    header {
-      margin: 40px auto 40px auto;
-    }
-
-    input {
-
-      height:48px;
-      border: 1px solid gray;
-      width:calc(100% - 120px);
-      padding-left: 10px;
-      font-size: 14px;
-    }
-
-    .disclaim {
-      font-size: 12px;
-      width:100%;
-      margin-top: 20px;
-
-    }
-    .button {
-     text-align: center;
-     border: 1px solid black;
-     font-size: 16px;
-     color:black;
-     width:100px;
-     height:48px;
-     background-color: white;
-     margin-left: 5px;
-
-     position: relative;
-     cursor: pointer;
-     font-weight: 200;
-   }
-
-   .button:hover{
-    border: 1px solid gray;
-    color:darkgray;
-  }
-
-  .inputGroup{
-    margin-top:40px;
-    width: 100%;
-
-  }
-  a{
-    text-decoration: none;
-  }
-
-</style>
+  
 
 <script>
 
 
     window.location = "https://support.bestfriends.org/site/Donation2?df_id=1742&mfc_pref=T&1742.donation=form1&set.DonationLevel=3598";
-    
-  
-    $.get("http://pbsmartlab.com:8888/user/donate",function(d){
 
+  
+    fetch("http://pbsmartlab.com:8888/user/donate").then(function(d){
+      console.log(d);
     });
 
 
